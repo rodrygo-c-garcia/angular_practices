@@ -1,8 +1,8 @@
 import './style.css'
 import { setupCounter } from './counter.ts'
 import { namesList } from './topics/01-basic-types.ts'
-
-
+import './topics/03-functions.ts'
+import './topics/04-homework-types.ts'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
