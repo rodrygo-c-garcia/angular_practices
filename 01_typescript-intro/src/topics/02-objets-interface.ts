@@ -16,7 +16,8 @@ let persona1 = new Persona("Juan", 16);
 
 interface animal {
   name: String,
-  age: number
+  age: number,
+  raza?: string
 }
 
 const animal: animal = {
