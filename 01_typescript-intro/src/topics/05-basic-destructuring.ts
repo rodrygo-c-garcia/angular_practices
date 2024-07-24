@@ -1,3 +1,4 @@
+// Desestructuracion de Objetos
 interface AudioPlayer {
   audioVolumen: number;
   songDuration: number;
@@ -20,5 +21,13 @@ const audioPlayer: AudioPlayer = {
   },
 }
 
-const { song } = audioPlayer;
-console.log(song)
+// const { author } = audioPlayer.detail;
+// const { songDuration, song } = audioPlayer; // desestructuracion
+// console.log(song, songDuration, author)
+
+
+// Desestructuracion de Arreglos
+const dbz: Array<string> = ['Goku', 'trunks', 'Bulma'];
+
+const [goku, p2, p3] = dbz;
+console.log(goku)
