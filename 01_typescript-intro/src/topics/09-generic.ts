@@ -35,3 +35,15 @@ const stringList = new GenericList<string>();
 stringList.add("A");
 stringList.add("B");
 console.log(stringList.getAll()); // ['A', 'B']
+
+// Interface Genericos
+interface Pair<T> {
+  first: T;
+  second: T;
+}
+
+const numberPair: Pair<number> = { first: 1, second: 2 };
+const stringPair: Pair<string> = { first: "A", second: "B" };
+
+console.log(numberPair); // { first: 1, second: 2 }
+console.log(stringPair); // { first: 'A', second: 'B' }
