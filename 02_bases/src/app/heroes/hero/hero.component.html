@@ -1,1 +1,35 @@
 <p>hero works!</p>
+
+<div class="container">
+  <label for="name" class="mx-2">Nombre:</label>
+  <input type="text" [(ngModel)]="nameInput" required />
+</div>
+
+<div class="container">
+  <label for="age" class="mx-2">Edad:</label>
+  <input type="number" [(ngModel)]="ageInput" required />
+</div>
+
+<dl>
+  <td>Nombre:</td>
+  <dd>{{ name }}</dd>
+
+  <td>Edad:</td>
+  <dd>{{ age }}</dd>
+
+  <td>Metodo:</td>
+  <dd>{{ getHeroDescription() }}</dd>
+
+  <td>Capitalizacion:</td>
+  <dd>{{ capitalizedName }}</dd>
+</dl>
+
+<div class="container">
+  <button
+    *ngIf="name !== nameInput"
+    class="btn btn-primary mx-2"
+    (click)="updateData()"
+  >
+    Cambiar datos
+  </button>
+</div>
