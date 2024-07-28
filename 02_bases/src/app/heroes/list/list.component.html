@@ -1,5 +1,20 @@
-<p>Lista de Heroes</p>
+<div *ngIf="heroNames.length > 0; else nothingHeroes">
+  <h2>Lista de Heroes Lleno</h2>
+</div>
+
+<ng-template #nothingHeroes>
+  <h2>Lista de heroes Vacia</h2>
+</ng-template>
 
 <ul>
   <li *ngFor="let item of heroNames" class="list-group-item">{{ item }}</li>
 </ul>
+
+<h3>
+  Heroe Borrado: <small class="text-danger">{{ message }}</small>
+</h3>
+<div class="container">
+  <button (click)="deleteHero()" class="btn btn-outline-danger">
+    Borrar ultimo hero
+  </button>
+</div>

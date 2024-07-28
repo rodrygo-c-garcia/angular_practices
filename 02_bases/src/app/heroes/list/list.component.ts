@@ -13,4 +13,12 @@ export class ListComponent {
     'Super San',
     'Goku',
   ];
+
+  message: string = 'Borre un Heroe';
+
+  deleteHero(): void {
+    this.heroNames.length > 0
+      ? (this.message = this.heroNames.pop()!)
+      : (this.message = 'Ya no hay mas heroes');
+  }
 }
