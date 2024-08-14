@@ -1,1 +1,1 @@
-# angular_practices
+# angular practices
